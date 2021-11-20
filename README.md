@@ -1,13 +1,21 @@
 # Landing Page Project
 
+## Project Page Preview
+Link to github page preview: [Landing Page](https://mohammadkhallaf.github.io/udacity-landing-page/)
+
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Demo Preview](#project-page-preview)
+* [Description](#description)
+* [Usage](#usage)
+* [Starter Code](#starter-code)
 
-## Instructions
+## Description
+- Multi-section page with dynamic update of navigation bar tabs based on sections added
+- All features are to be resposive
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Usage
+- To manipulate the DOM elements (and create many of them) and interact with the browser events to deliver a better dynamic experience to the site
+## Starter Code
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+The project is based on a static structure of HTML and CSS from the [Udacity Code](https://github.com/udacity/fend/tree/refresh-2019/projects/landing-page)

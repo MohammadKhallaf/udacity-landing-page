@@ -50,10 +50,16 @@ window.addEventListener("scroll", () => {
     let sectionTop = section.getBoundingClientRect().top;
     let thirdOfWindow = Math.floor(window.innerHeight / 4);
     if (sectionTop < thirdOfWindow && sectionTop >= -thirdOfWindow) {
-      console.log(section, sectionTop);
+      console.log(document.querySelector("a[href=\"#"+section.id+"\"]"));
       section.classList.add("activated-section");
+      document.querySelector("a[href=\"#"+section.id+"\"]").style.color='orange'
+      document.querySelector("a[href=\"#"+section.id+"\"]").style.background='#333'
     } else {
       section.classList.remove("activated-section");
+      document.querySelector("a[href=\"#"+section.id+"\"]").style.color='black'
+      document.querySelector("a[href=\"#"+section.id+"\"]").style.background='#fff'
     }
   });
 });
+
+// TODO: remove all console logs
