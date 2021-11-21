@@ -65,17 +65,17 @@ function setBehaviour() {
 /**
  * Hide the navigation bar after some time of no scrolling
  */
-function hideOnTime() {
+function hideOnTime(delay) {
   document.querySelector(".page__header").style.top = "0";
   clearTimeout(timeOut);
   timeOut = setTimeout(function () {
     document.querySelector(".page__header").style.top = "-5rem";
-  }, 2000);
+  }, delay);
 }
 /**
  * Hide the navigation bar for scrolling to up
  */
-function hideOnScroll(afterScroll){
+function hideOnScroll(afterScroll) {
   if (beforeScorll > afterScroll) {
     document.querySelector(".page__header").style.top = "0";
   } else {
@@ -91,9 +91,8 @@ var beforeScorll = window.pageYOffset;
 
 window.addEventListener("scroll", () => {
   setBehaviour();
-  hideOnTime();
+  hideOnTime(2000);
 
   let afterScroll = window.pageYOffset;
-  hideOnScroll(afterScroll)
-  
+  hideOnScroll(afterScroll);
 });
