@@ -7,7 +7,10 @@
  * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
  *
 */
-
+*{
+    padding: 0;
+    margin: 0;
+}
 
 /* ---- Base Rules ---- */
 body {
@@ -16,6 +19,7 @@ body {
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+    position: relative;
 }
 
 
@@ -24,12 +28,14 @@ h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+    
 }
 
 @media only screen and (min-width: 35em){
     h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
+        
     }
 }
 
@@ -48,6 +54,7 @@ p {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+    
 }
 
 .main-hero {
@@ -56,7 +63,7 @@ main {
 }
 
 section {
-    position: relative;
+    /* position: relative; */
     min-height: 80vh;
 }
 
@@ -64,10 +71,17 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    font-size: 1em;
+}
+@media only screen and (max-width:425px){
+    .navbar__menu ul {
+        font-size: 0.85em;
+    } 
 }
 
 .navbar__menu li {
@@ -95,7 +109,10 @@ section {
     top: 0;
     width: 100%;
     z-index: 5;
+    transition: top 0.5s;
 }
+
+
 
 /* Footer Styles */
 .page__footer {
@@ -112,8 +129,9 @@ section {
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
-    padding: 1em;
+    padding: 2em;
     text-align: left;
+    
 }
 
 @media only screen and (min-width: 35em){
