@@ -12,7 +12,8 @@ Link to github page preview: [Landing Page](https://mohammadkhallaf.github.io/ud
 
 ## Description
 - Multi-section page with dynamic update of navigation bar tabs based on sections added
-- All features are to be resposive
+- All features are to be responsive
+- Added smooth "scroll to section"
 - Added a highlighting (active state) for the active section and active tab
 
 ## Usage
