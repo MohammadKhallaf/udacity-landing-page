@@ -23,14 +23,17 @@ pageSections.forEach(function (section) {
 
 function createNavigationBar() {
   for (let i in sectionNames) {
-    let R = document.createElement("li");
-    let L = document.createElement("a");
-    L.setAttribute("href", "#" + sectionIDs[i]);
-    L.classList.add("menu__link");
-    L.innerHTML = sectionNames[i];
-
-    R.appendChild(L);
-    navBarList.appendChild(R);
+    let listElement = document.createElement("li");
+    let anchorElement = document.createElement("a");
+    anchorElement.addEventListener("click",function(){
+      event.preventDefault();
+      pageSections[i].scrollIntoView({behavior:"smooth"})
+    })
+    anchorElement.setAttribute("href", "#" + sectionIDs[i]);
+    anchorElement.classList.add("menu__link");
+    anchorElement.innerHTML = sectionNames[i];
+    listElement.appendChild(anchorElement);
+    navBarList.appendChild(listElement);
   }
 }
 
