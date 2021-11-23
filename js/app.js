@@ -6,6 +6,7 @@ const navBarList = document.getElementById("navbar__list");
 const sectionNames = [];
 const sectionIDs = [];
 let timeOut = 0;
+let beforeScorll = window.pageYOffset;
 /**
  * ___Buid arrays of page section names and IDs___
  * Section Name to be used in Nav bar Name
@@ -78,6 +79,8 @@ function hideOnTime(delay) {
 /**
  * Hide the navigation bar for scrolling to up
  */
+
+ 
 function hideOnScroll(afterScroll) {
   if (beforeScorll > afterScroll) {
     document.querySelector(".page__header").style.top = "0";
@@ -90,7 +93,7 @@ function hideOnScroll(afterScroll) {
  * Building the Nav bar on windows loading
  */
 window.onload = createNavigationBar();
-var beforeScorll = window.pageYOffset;
+
 
 window.addEventListener("scroll", () => {
   setBehaviour();
