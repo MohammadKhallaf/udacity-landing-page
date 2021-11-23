@@ -25,10 +25,10 @@ function createNavigationBar() {
   for (let i in sectionNames) {
     let listElement = document.createElement("li");
     let anchorElement = document.createElement("a");
-    anchorElement.addEventListener("click",function(){
+    anchorElement.addEventListener("click", function () {
       event.preventDefault();
-      pageSections[i].scrollIntoView({behavior:"smooth"})
-    })
+      pageSections[i].scrollIntoView({ behavior: "smooth" });
+    });
     anchorElement.setAttribute("href", "#" + sectionIDs[i]);
     anchorElement.classList.add("menu__link");
     anchorElement.innerHTML = sectionNames[i];
@@ -98,4 +98,11 @@ window.addEventListener("scroll", () => {
 
   let afterScroll = window.pageYOffset;
   hideOnScroll(afterScroll);
+});
+
+// Show the Nav bar when hover at the top area
+document.addEventListener("mousemove", function (e) {
+  if (e.clientY <= 60) {
+    hideOnTime(5000);
+  } 
 });
